@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,13 @@
 		9DF4C968262A768400C2C833 /* Cafe_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C967262A768400C2C833 /* Cafe_ManagerTests.swift */; };
 		9DF4C973262A768400C2C833 /* Cafe_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C972262A768400C2C833 /* Cafe_ManagerUITests.swift */; };
 		9DF4C987262A77E900C2C833 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DF4C986262A77E900C2C833 /* GoogleService-Info.plist */; };
+		9DF4C9AC262A851500C2C833 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9AB262A851500C2C833 /* LoginViewController.swift */; };
+		9DF4C9B4262A8A6B00C2C833 /* bottomtabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9B3262A8A6B00C2C833 /* bottomtabBarViewController.swift */; };
+		9DF4C9B9262A98C600C2C833 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9B8262A98C600C2C833 /* StoreViewController.swift */; };
+		9DF4C9BE262AA7DE00C2C833 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9BD262AA7DE00C2C833 /* PreviewViewController.swift */; };
+		9DF4C9C4262AB1BD00C2C833 /* fooddtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9C3262AB1BD00C2C833 /* fooddtl.swift */; };
+		9DF4C9CC262ABA9B00C2C833 /* foodonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9CB262ABA9B00C2C833 /* foodonce.swift */; };
+		9DF4C9D1262AE01500C2C833 /* category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4C9D0262AE01500C2C833 /* category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		9DF4C972262A768400C2C833 /* Cafe_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe_ManagerUITests.swift; sourceTree = "<group>"; };
 		9DF4C974262A768400C2C833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DF4C986262A77E900C2C833 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DF4C9AB262A851500C2C833 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9DF4C9B3262A8A6B00C2C833 /* bottomtabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomtabBarViewController.swift; sourceTree = "<group>"; };
+		9DF4C9B8262A98C600C2C833 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		9DF4C9BD262AA7DE00C2C833 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		9DF4C9C3262AB1BD00C2C833 /* fooddtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fooddtl.swift; sourceTree = "<group>"; };
+		9DF4C9CB262ABA9B00C2C833 /* foodonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodonce.swift; sourceTree = "<group>"; };
+		9DF4C9D0262AE01500C2C833 /* category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +130,8 @@
 		9DF4C94F262A768300C2C833 /* Cafe-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				9DF4C9C2262AB19D00C2C833 /* classes */,
+				9DF4C9AA262A84EA00C2C833 /* Controllers */,
 				9DF4C950262A768300C2C833 /* AppDelegate.swift */,
 				9DF4C952262A768300C2C833 /* SceneDelegate.swift */,
 				9DF4C954262A768300C2C833 /* ViewController.swift */,
@@ -146,13 +162,33 @@
 			path = "Cafe-ManagerUITests";
 			sourceTree = "<group>";
 		};
+		9DF4C9AA262A84EA00C2C833 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DF4C9AB262A851500C2C833 /* LoginViewController.swift */,
+				9DF4C9B3262A8A6B00C2C833 /* bottomtabBarViewController.swift */,
+				9DF4C9B8262A98C600C2C833 /* StoreViewController.swift */,
+				9DF4C9BD262AA7DE00C2C833 /* PreviewViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9DF4C9C2262AB19D00C2C833 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				9DF4C9C3262AB1BD00C2C833 /* fooddtl.swift */,
+				9DF4C9CB262ABA9B00C2C833 /* foodonce.swift */,
+				9DF4C9D0262AE01500C2C833 /* category.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		F60978650F65CA5C3FFE97A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				80F3A24A3C8144697A4A8FD4 /* Pods-Cafe-Manager.debug.xcconfig */,
 				4B58731BD4DD2C45E3D2E4DF /* Pods-Cafe-Manager.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -331,9 +367,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF4C9AC262A851500C2C833 /* LoginViewController.swift in Sources */,
+				9DF4C9D1262AE01500C2C833 /* category.swift in Sources */,
 				9DF4C955262A768300C2C833 /* ViewController.swift in Sources */,
+				9DF4C9BE262AA7DE00C2C833 /* PreviewViewController.swift in Sources */,
+				9DF4C9B9262A98C600C2C833 /* StoreViewController.swift in Sources */,
+				9DF4C9C4262AB1BD00C2C833 /* fooddtl.swift in Sources */,
 				9DF4C951262A768300C2C833 /* AppDelegate.swift in Sources */,
+				9DF4C9CC262ABA9B00C2C833 /* foodonce.swift in Sources */,
 				9DF4C953262A768300C2C833 /* SceneDelegate.swift in Sources */,
+				9DF4C9B4262A8A6B00C2C833 /* bottomtabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
