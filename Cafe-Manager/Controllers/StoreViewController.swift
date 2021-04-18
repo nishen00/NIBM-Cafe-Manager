@@ -50,13 +50,14 @@ class StoreViewController: UIViewController {
     @IBAction func swichViews(_ sender: UISegmentedControl){
         
        
-        
+        print(self.children)
         
         if sender.selectedSegmentIndex == 0 {
             
             firstview.alpha = 1
             secondview.alpha = 0
             thview.alpha = 0
+         
         }
         
         if sender.selectedSegmentIndex == 1 {
