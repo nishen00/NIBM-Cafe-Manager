@@ -48,6 +48,12 @@ class addnewitemViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         
+        getcatego()
+    }
+    
+    
+    func getcatego(){
+        
         datasource.removeAll()
      
         let db = Firestore.firestore()
@@ -81,6 +87,7 @@ class addnewitemViewController: UIViewController, UIImagePickerControllerDelegat
 
 
         }
+        
     }
     
     
@@ -269,7 +276,7 @@ class addnewitemViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func addcategory(_ sender: Any) {
         
-       
+      
         selectedbtn = categorybtn
         
         addTransparentView(frames: categorybtn.frame)
