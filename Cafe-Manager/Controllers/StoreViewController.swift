@@ -27,6 +27,8 @@ class StoreViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
+    
     func showToast(message : String, font: UIFont) {
 
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
@@ -57,6 +59,11 @@ class StoreViewController: UIViewController {
             firstview.alpha = 1
             secondview.alpha = 0
             thview.alpha = 0
+            
+            let myClass : PreviewViewController = self.children[0] as! PreviewViewController
+           
+            myClass.viewWillAppear(false)
+            myClass.foodtableview.reloadData()
          
         }
         
@@ -72,6 +79,12 @@ class StoreViewController: UIViewController {
             secondview.alpha = 0
             thview.alpha = 1
             firstview.alpha = 0
+            
+            let myClass : addnewitemViewController = self.children[2] as! addnewitemViewController
+           
+            myClass.viewWillAppear(false)
+            myClass.tableview.reloadData()
+            
         }
         
         
