@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="0WW-xp-m06">
-                                <rect key="frame" x="87" y="91" width="240" height="128"/>
+                                <rect key="frame" x="87" y="135" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="dX2-HW-VqF"/>
                                     <constraint firstAttribute="width" constant="240" id="hI4-i7-gN5"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-UQ-oQJ">
-                                <rect key="frame" x="47" y="270" width="320" height="108"/>
+                                <rect key="frame" x="47" y="314" width="320" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-1W-8u2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -54,7 +54,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWF-XW-sdk">
-                                <rect key="frame" x="162" y="456" width="90" height="45"/>
+                                <rect key="frame" x="162" y="500" width="90" height="45"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="3ty-ZX-c2d"/>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4C-mB-I5F">
-                                <rect key="frame" x="171" y="522" width="72" height="33"/>
+                                <rect key="frame" x="171" y="566" width="72" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Register?">
                                     <color key="titleColor" systemColor="linkColor"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-oi-zVl">
-                                <rect key="frame" x="149.5" y="589" width="115" height="30"/>
+                                <rect key="frame" x="149.5" y="633" width="115" height="30"/>
                                 <state key="normal" title="Forget Password">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -121,17 +121,17 @@
             <objects>
                 <viewController id="gu3-1q-wGS" customClass="RegisterViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ust-V4-EaO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-rk-eD9">
-                                <rect key="frame" x="87" y="74" width="240" height="150"/>
+                                <rect key="frame" x="87" y="118" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="MDa-oF-O0d"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cHt-Vz-6iR">
-                                <rect key="frame" x="15" y="244" width="384" height="170"/>
+                                <rect key="frame" x="15" y="288" width="384" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoB-oU-rMk">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
@@ -160,7 +160,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-bc-esO">
-                                <rect key="frame" x="167" y="483" width="80" height="50"/>
+                                <rect key="frame" x="167" y="527" width="80" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="vC4-hM-qZM"/>
@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAu-Xx-Wuk">
-                                <rect key="frame" x="184.5" y="554" width="45" height="30"/>
+                                <rect key="frame" x="184.5" y="598" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="n9L-bb-MOA"/>
                                 </constraints>
@@ -184,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU8-fG-8Hk">
-                                <rect key="frame" x="149.5" y="603" width="115" height="30"/>
+                                <rect key="frame" x="149.5" y="647" width="115" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="ded-wb-MtQ"/>
                                 </constraints>
@@ -229,17 +229,17 @@
             <objects>
                 <viewController id="PCa-P0-CcW" customClass="ForgetpasswordViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UAf-9U-tXx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="kKw-ig-9sZ">
-                                <rect key="frame" x="87" y="80" width="240" height="150"/>
+                                <rect key="frame" x="87" y="124" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="kV1-41-b4N"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGv-c0-FZO">
-                                <rect key="frame" x="15" y="250" width="384" height="50"/>
+                                <rect key="frame" x="15" y="294" width="384" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sG1-Ma-CHw"/>
                                 </constraints>
@@ -247,7 +247,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-se-5BO">
-                                <rect key="frame" x="177" y="348" width="60" height="40"/>
+                                <rect key="frame" x="177" y="392" width="60" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="e28-xi-U44"/>
@@ -388,10 +388,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljI-tc-ADf">
-                                                    <rect key="frame" x="286" y="43" width="60" height="30"/>
+                                                    <rect key="frame" x="246" y="43" width="100" height="30"/>
                                                     <color key="backgroundColor" systemColor="linkColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="yC3-LZ-Bdm"/>
+                                                        <constraint firstAttribute="width" constant="100" id="yC3-LZ-Bdm"/>
                                                     </constraints>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -453,11 +453,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-NP-3PC">
-                                        <rect key="frame" x="35" y="78" width="80" height="50"/>
+                                        <rect key="frame" x="35" y="78" width="100" height="50"/>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6wX-ba-CXo"/>
-                                            <constraint firstAttribute="width" constant="80" id="dvu-Qj-Nfw"/>
+                                            <constraint firstAttribute="width" constant="100" id="dvu-Qj-Nfw"/>
                                         </constraints>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -626,9 +626,8 @@
         <!--Navigation Controller-->
         <scene sceneID="zQj-Qs-wcd">
             <objects>
-                <navigationController hidesBarsOnTap="YES" id="ral-ci-vvC" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="ral-ci-vvC" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bul-L4-mu3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -954,7 +953,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="l8n-gK-XTu"/>
-        <segue reference="QiW-K7-GK9"/>
+        <segue reference="Lzx-h7-ixI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4fc20722-5368-e911-80d5-b82a72db46f21-680x680pr-1" width="309" height="250"/>

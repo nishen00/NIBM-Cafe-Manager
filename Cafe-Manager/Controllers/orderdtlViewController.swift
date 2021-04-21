@@ -28,7 +28,28 @@ class orderdtlViewController: UIViewController {
         super.viewDidLoad()
         
         customername.text = name + "(" + orderid + ")"
-        statusbtn.setTitle(String(btnstatus), for: .normal)
+        var status : String = ""
+        if(btnstatus == 2)
+        {
+            status = "Accepted"
+        }
+        
+        if(btnstatus == 3)
+        {
+            status = "Prepararing"
+        }
+        
+        if (btnstatus == 4)
+        {
+            status = "Ready"
+        }
+        
+        if (btnstatus == 1)
+        {
+            status = "Waiting"
+        }
+        
+        statusbtn.setTitle(status, for: .normal)
         
         orderdtlsview.layer.borderWidth = 1.0
         orderdtlsview.layer.borderColor = UIColor.darkGray.cgColor

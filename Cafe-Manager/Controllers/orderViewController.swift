@@ -99,6 +99,49 @@ class orderViewController: UIViewController {
     }
     
     
+    func Preapareorder(docid:String){
+        
+        
+        let updateshowstatus = db.collection("order").document(docid)
+        
+        
+        updateshowstatus.updateData(["section":"0","status":3]) { (error) in
+            if error != nil
+            {
+               print(error)
+            }
+            else
+            {
+                print("updated")
+            }
+        }
+        
+        getorder()
+        
+    }
+    
+    func Readyorder(docid:String){
+        
+        
+        let updateshowstatus = db.collection("order").document(docid)
+        
+        
+        updateshowstatus.updateData(["section":"0","status":4]) { (error) in
+            if error != nil
+            {
+               print(error)
+            }
+            else
+            {
+                print("updated")
+            }
+        }
+        
+        getorder()
+        
+    }
+    
+    
     func rejectorder(docid:String){
         
         db.collection("order").document(docid).delete() { err in
@@ -195,6 +238,24 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         Accept.backgroundColor = .green
         
         
+        let Prepare = UIContextualAction(style: .normal, title: "Prepare") { (action, view, completionHandler) in
+            
+            self.Preapareorder(docid: self.globle2[indexPath.row].docid)
+            self.tableview.reloadData()
+            
+        }
+        
+        let Ready = UIContextualAction(style: .normal, title: "Ready") { (action, view, completionHandler) in
+            
+            self.Readyorder(docid: self.globle2[indexPath.row].docid)
+            self.tableview.reloadData()
+            
+        }
+        
+        Prepare.backgroundColor = .green
+   
+        
+        
         if indexPath.section == 1
         {
         
@@ -204,8 +265,22 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         
         else
         {
-        let swipe = UISwipeActionsConfiguration(actions: [])
+            if(globle2[indexPath.row].status == 4)
+            {
+                let swipe = UISwipeActionsConfiguration(actions: [])
+                    return swipe
+            }
+            
+            if(globle2[indexPath.row].status == 3)
+            {
+                let swipe = UISwipeActionsConfiguration(actions: [Ready])
+                    return swipe
+            }
+            else
+            {
+        let swipe = UISwipeActionsConfiguration(actions: [Prepare])
             return swipe
+            }
         }
        
     }

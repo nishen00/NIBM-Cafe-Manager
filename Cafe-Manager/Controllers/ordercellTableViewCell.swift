@@ -25,8 +25,30 @@ class ordercellTableViewCell: UITableViewCell {
         customername.text = order.cusname
         
         orderid.text = "Order No : " + order.orderno
+        var status : String = ""
         
-        statusbtn.setTitle(String(order.status), for: .normal)
+        
+        if(order.status == 2)
+        {
+            status = "Accepted"
+        }
+        
+        if(order.status == 3)
+        {
+            status = "Prepararing"
+        }
+        
+        if (order.status == 4)
+        {
+            status = "Ready"
+        }
+        
+        if (order.status == 1)
+        {
+            status = "Waiting"
+        }
+        
+        statusbtn.setTitle(status, for: .normal)
       
        
     }
