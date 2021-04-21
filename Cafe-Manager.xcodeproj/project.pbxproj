@@ -12,6 +12,10 @@
 		9D48E3E3262D860200A47E3C /* orderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48E3E2262D860200A47E3C /* orderViewController.swift */; };
 		9D48E3E8262D879C00A47E3C /* ordercellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48E3E7262D879C00A47E3C /* ordercellTableViewCell.swift */; };
 		9D48E3ED262D89CC00A47E3C /* orderdtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48E3EC262D89CC00A47E3C /* orderdtl.swift */; };
+		9D5BB6BB262FE482001F236C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6BA262FE482001F236C /* AccountViewController.swift */; };
+		9D5BB6C026302806001F236C /* orderReportdtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6BF26302806001F236C /* orderReportdtl.swift */; };
+		9D5BB6C526304038001F236C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6C426304038001F236C /* RegisterViewController.swift */; };
+		9D5BB6CA2630446F001F236C /* ForgetpasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6C92630446F001F236C /* ForgetpasswordViewController.swift */; };
 		9D61CFB8262EB2AD00DC89F4 /* orderdtlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61CFB7262EB2AD00DC89F4 /* orderdtlViewController.swift */; };
 		9D6A893E262BDC1600C160E4 /* tablecellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A893D262BDC1600C160E4 /* tablecellTableViewCell.swift */; };
 		9D6A8943262C00D800C160E4 /* addnewitemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A8942262C00D800C160E4 /* addnewitemViewController.swift */; };
@@ -58,6 +62,10 @@
 		9D48E3E2262D860200A47E3C /* orderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderViewController.swift; sourceTree = "<group>"; };
 		9D48E3E7262D879C00A47E3C /* ordercellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordercellTableViewCell.swift; sourceTree = "<group>"; };
 		9D48E3EC262D89CC00A47E3C /* orderdtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderdtl.swift; sourceTree = "<group>"; };
+		9D5BB6BA262FE482001F236C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9D5BB6BF26302806001F236C /* orderReportdtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderReportdtl.swift; sourceTree = "<group>"; };
+		9D5BB6C426304038001F236C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9D5BB6C92630446F001F236C /* ForgetpasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetpasswordViewController.swift; sourceTree = "<group>"; };
 		9D61CFB7262EB2AD00DC89F4 /* orderdtlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderdtlViewController.swift; sourceTree = "<group>"; };
 		9D6A893D262BDC1600C160E4 /* tablecellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tablecellTableViewCell.swift; sourceTree = "<group>"; };
 		9D6A8942262C00D800C160E4 /* addnewitemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addnewitemViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +197,9 @@
 				9D48E3E2262D860200A47E3C /* orderViewController.swift */,
 				9D48E3E7262D879C00A47E3C /* ordercellTableViewCell.swift */,
 				9D61CFB7262EB2AD00DC89F4 /* orderdtlViewController.swift */,
+				9D5BB6BA262FE482001F236C /* AccountViewController.swift */,
+				9D5BB6C426304038001F236C /* RegisterViewController.swift */,
+				9D5BB6C92630446F001F236C /* ForgetpasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 				9DF4C9CB262ABA9B00C2C833 /* foodonce.swift */,
 				9DF4C9D0262AE01500C2C833 /* category.swift */,
 				9D48E3EC262D89CC00A47E3C /* orderdtl.swift */,
+				9D5BB6BF26302806001F236C /* orderReportdtl.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -388,15 +400,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5BB6C026302806001F236C /* orderReportdtl.swift in Sources */,
 				9DF4C9AC262A851500C2C833 /* LoginViewController.swift in Sources */,
 				9DF4C9D1262AE01500C2C833 /* category.swift in Sources */,
 				9DF4C955262A768300C2C833 /* ViewController.swift in Sources */,
+				9D5BB6CA2630446F001F236C /* ForgetpasswordViewController.swift in Sources */,
 				9D48E3E3262D860200A47E3C /* orderViewController.swift in Sources */,
 				9DF4C9BE262AA7DE00C2C833 /* PreviewViewController.swift in Sources */,
 				9DF4C9B9262A98C600C2C833 /* StoreViewController.swift in Sources */,
 				9D48E3E8262D879C00A47E3C /* ordercellTableViewCell.swift in Sources */,
 				9DF4C9C4262AB1BD00C2C833 /* fooddtl.swift in Sources */,
+				9D5BB6BB262FE482001F236C /* AccountViewController.swift in Sources */,
 				9D433E22262C67DE0090B58E /* categoryViewController.swift in Sources */,
+				9D5BB6C526304038001F236C /* RegisterViewController.swift in Sources */,
 				9D48E3ED262D89CC00A47E3C /* orderdtl.swift in Sources */,
 				9D6A8943262C00D800C160E4 /* addnewitemViewController.swift in Sources */,
 				9D61CFB8262EB2AD00DC89F4 /* orderdtlViewController.swift in Sources */,
