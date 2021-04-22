@@ -26,6 +26,7 @@ class ordercellTableViewCell: UITableViewCell {
         
         orderid.text = "Order No : " + order.orderno
         var status : String = ""
+        var status2 : String = ""
         
         
         if(order.status == 2)
@@ -45,6 +46,7 @@ class ordercellTableViewCell: UITableViewCell {
         
         if (order.status == 1)
         {
+            
             status = "Waiting"
         }
         
