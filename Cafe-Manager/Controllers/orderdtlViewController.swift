@@ -17,6 +17,8 @@ class orderdtlViewController: UIViewController {
     
     @IBOutlet weak var orderdtlsview: UIView!
     
+
+    
     var name : String = ""
     var btnstatus : Int = 0
     var docid : String = ""
@@ -50,6 +52,8 @@ class orderdtlViewController: UIViewController {
         }
         
         statusbtn.setTitle(status, for: .normal)
+        statusbtn.layer.cornerRadius = 0.1 * statusbtn.bounds.size.width
+        
         
         orderdtlsview.layer.borderWidth = 1.0
         orderdtlsview.layer.borderColor = UIColor.darkGray.cgColor
@@ -188,7 +192,9 @@ class orderdtlViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
-
+    
+    
+    
     
 
 }

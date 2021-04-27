@@ -51,6 +51,7 @@ class ordercellTableViewCell: UITableViewCell {
         }
         
         statusbtn.setTitle(status, for: .normal)
+        statusbtn.layer.cornerRadius = 0.1 * statusbtn.bounds.size.width
       
        
     }

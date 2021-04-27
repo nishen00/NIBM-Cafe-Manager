@@ -15,12 +15,14 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var fromdate: UIDatePicker!
     
-    @IBOutlet weak var detailview: UIScrollView!
+    
+    @IBOutlet weak var detailview: UIView!
     
     @IBOutlet weak var todate: UIDatePicker!
     let db = Firestore.firestore()
     
     var itemonecereport : [orderReportdtl] = []
+    var tag :Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,8 @@ class AccountViewController: UIViewController {
         fromdate.datePickerMode = .date
         todate.datePickerMode = .date
         
-        
+       
+       
         
         
        
@@ -36,6 +39,9 @@ class AccountViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         itemonecereport.removeAll()
+        
+        
+        
         for subview in self.detailview.subviews {
            
                subview.removeFromSuperview()
@@ -55,9 +61,9 @@ class AccountViewController: UIViewController {
         let docorderdtl = self.db.collection("order")
         let from = fromdate.date
         let To = todate.date
-        var cons : CGFloat = 50
+        var cons : CGFloat = 10
         var Date : String = ""
-        var tag :Int = 1
+        self.tag = 1
         
         for subview in self.detailview.subviews {
            
@@ -96,6 +102,10 @@ class AccountViewController: UIViewController {
                     
                     
                     
+                    
+                    
+                    
+                    
                     let docorderdtl = self.db.collection("orderdtl")
                     
                     docorderdtl.whereField("orderid", isEqualTo: docid).getDocuments { (snap, error) in
@@ -107,20 +117,26 @@ class AccountViewController: UIViewController {
                         else
                         {
                             
+                            let viewcontent = UIView()
+                      
+                            self.detailview.addSubview(viewcontent)
+                            viewcontent.translatesAutoresizingMaskIntoConstraints = false
+                            viewcontent.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 0).isActive = true
+                            viewcontent.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons).isActive = true
+                            viewcontent.rightAnchor.constraint(equalTo: self.detailview.rightAnchor, constant: 0).isActive = true
+                            viewcontent.heightAnchor.constraint(equalToConstant: 90).isActive = true
+                            viewcontent.tag = self.tag + 10
+                            
+                            
+                            
+                            
                             for element in (snap?.documents)! {
                                 
                                 
                                 
                                 let data = element.data()
                                 
-                                let viewcontent = UIView()
-                                viewcontent.backgroundColor = .red
-                                self.detailview.addSubview(viewcontent)
-                                viewcontent.translatesAutoresizingMaskIntoConstraints = false
-                                viewcontent.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 0).isActive = true
-                                viewcontent.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons).isActive = true
-                                viewcontent.rightAnchor.constraint(equalTo: self.detailview.rightAnchor, constant: 0).isActive = true
-                                viewcontent.heightAnchor.constraint(equalToConstant: 90).isActive = true
+                                
                                 
                                 
                                 let item = UILabel()
@@ -152,7 +168,7 @@ class AccountViewController: UIViewController {
                                 price.textAlignment = .center
                                 price.text = final
                                 price.textColor = UIColor.black
-                                self.detailview.addSubview(price)
+                                viewcontent.addSubview(price)
                                 price.translatesAutoresizingMaskIntoConstraints = false
                                 price.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 200).isActive = true
                                 price.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons).isActive = true
@@ -171,18 +187,20 @@ class AccountViewController: UIViewController {
                             
                        
                             
-                            let printbtn = UILabel()
-                            printbtn.text =  Date
+                            let printbtn = UIButton()
+                            printbtn.setTitle("Print(" + Date + ")", for: .normal)
                          
                             self.detailview.addSubview(printbtn)
                             printbtn.translatesAutoresizingMaskIntoConstraints = false
                             printbtn.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 30).isActive = true
                             printbtn.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons + 5).isActive = true
-                            printbtn.tag = tag
-//                            printbtn.addTarget(self, action: #selector(self.processButtonClickEvent), for: UIControl.Event.touchDown)
+                            printbtn.tag = self.tag
+                            printbtn.backgroundColor = .darkGray
+                            printbtn.addTarget(self, action: #selector(self.processButtonClickEvent), for: UIControl.Event.touchDown)
                             
                             
                             let total = UILabel()
+                            total.textColor = UIColor(red: 188/255.0, green: 0, blue: 0, alpha: 1)
                             let totget = String("TOTAL: Rs." + String(totalfind))
                             total.textAlignment = .center
                             total.text = totget
@@ -190,13 +208,13 @@ class AccountViewController: UIViewController {
                             self.detailview.addSubview(total)
                             total.translatesAutoresizingMaskIntoConstraints = false
                             total.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 200).isActive = true
-                            total.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons + 5).isActive = true
+                            total.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons + 7).isActive = true
                             
                             
                             
                             let date22 = UILabel()
                             
-                            date22.tag = tag + 10
+                            date22.tag = self.tag + 100
                             date22.isHidden = true
                             date22.textAlignment = .center
                             date22.text = Date
@@ -207,9 +225,23 @@ class AccountViewController: UIViewController {
                             date22.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons + 5).isActive = true
                             
                             
-                            cons = cons * 2
                             
-                           tag = tag + tag
+                            
+                            let viewcontentlst = UIView()
+                            viewcontentlst.backgroundColor = .darkGray
+                            self.detailview.addSubview(viewcontentlst)
+                            viewcontentlst.translatesAutoresizingMaskIntoConstraints = false
+                            viewcontentlst.leftAnchor.constraint(equalTo: self.detailview.leftAnchor, constant: 0).isActive = true
+                            viewcontentlst.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons).isActive = true
+                            viewcontentlst.rightAnchor.constraint(equalTo: self.detailview.rightAnchor, constant: 0).isActive = true
+                            viewcontentlst.topAnchor.constraint(equalTo: date.bottomAnchor, constant: cons + 100).isActive = true
+                            viewcontentlst.heightAnchor.constraint(equalToConstant: 5).isActive = true
+                            
+                            
+                            
+                            cons = cons + 100
+                            
+                            self.tag = self.tag + self.tag
                            
                             
                             
@@ -259,8 +291,13 @@ class AccountViewController: UIViewController {
     
     @IBAction func Printhistory(_ sender: Any) {
         
+     
+        
         if itemonecereport.count > 0
         {
+            
+            
+          
         
         let info = UIPrintInfo(dictionary: nil)
     info.outputType = UIPrintInfo.OutputType.general
@@ -268,9 +305,9 @@ class AccountViewController: UIViewController {
     
     let vc = UIPrintInteractionController.shared
     vc.printInfo = info
-    vc.printingItem = detailview
-    vc.present(from: self.view.frame, in: self.view, animated: true, completionHandler: nil)
     vc.printingItem = detailview.toImage()
+    vc.present(from: self.view.frame, in: self.view, animated: true, completionHandler: nil)
+  
         
         }
         
@@ -282,6 +319,27 @@ class AccountViewController: UIViewController {
                  alert.addAction(ok)
             self.present(alert, animated: true)
         }
+        
+    }
+    
+    @objc func processButtonClickEvent(srcObj : UIButton) -> Void{
+        
+        let tag : String = String(srcObj.tag)
+        
+        var tagset = Int(tag)
+
+        let viewtoprint = detailview.viewWithTag(tagset! + 10) as! UIView
+        
+        let info = UIPrintInfo(dictionary: nil)
+    info.outputType = UIPrintInfo.OutputType.general
+    info.jobName = "Print"
+    
+    let vc = UIPrintInteractionController.shared
+    vc.printInfo = info
+    vc.printingItem = viewtoprint.toImage()
+    vc.present(from: self.view.frame, in: self.view, animated: true, completionHandler: nil)
+    
+        
         
     }
     

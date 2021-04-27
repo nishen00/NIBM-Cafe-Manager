@@ -166,7 +166,12 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         return 2
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0
+        {
        
         let viewController = storyboard?.instantiateViewController(withIdentifier: "orderdtlViewController") as! orderdtlViewController
         viewController.name = globle2[indexPath.row].cusname
@@ -176,6 +181,19 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         viewController.Phone = globle2[indexPath.row].cusphone
         
         self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        else
+        {
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "orderdtlViewController") as! orderdtlViewController
+            viewController.name = globle[indexPath.row].cusname
+            viewController.btnstatus = globle[indexPath.row].status
+            viewController.docid = globle[indexPath.row].docid
+            viewController.orderid = globle[indexPath.row].orderno
+            viewController.Phone = globle[indexPath.row].cusphone
+            
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
        
        
     }
@@ -203,6 +221,7 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableview.dequeueReusableCell(withIdentifier: "cell") as! ordercellTableViewCell
+        
         
         var filterarry : [orderdtl] = []
         let section = String( indexPath.section)

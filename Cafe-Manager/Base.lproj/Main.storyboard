@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="0WW-xp-m06">
-                                <rect key="frame" x="87" y="135" width="240" height="128"/>
+                                <rect key="frame" x="87" y="91" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="dX2-HW-VqF"/>
                                     <constraint firstAttribute="width" constant="240" id="hI4-i7-gN5"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-UQ-oQJ">
-                                <rect key="frame" x="47" y="314" width="320" height="108"/>
+                                <rect key="frame" x="47" y="270" width="320" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-1W-8u2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -43,7 +43,7 @@
                                             <constraint firstAttribute="height" constant="50" id="DsF-zu-AZa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="password:" destination="7Fc-03-gmX" eventType="editingDidEnd" id="SGy-lj-9d9"/>
                                         </connections>
@@ -54,7 +54,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWF-XW-sdk">
-                                <rect key="frame" x="162" y="500" width="90" height="45"/>
+                                <rect key="frame" x="162" y="456" width="90" height="45"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="3ty-ZX-c2d"/>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4C-mB-I5F">
-                                <rect key="frame" x="171" y="566" width="72" height="33"/>
+                                <rect key="frame" x="171" y="522" width="72" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Register?">
                                     <color key="titleColor" systemColor="linkColor"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-oi-zVl">
-                                <rect key="frame" x="149.5" y="633" width="115" height="30"/>
+                                <rect key="frame" x="149.5" y="589" width="115" height="30"/>
                                 <state key="normal" title="Forget Password">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -121,17 +121,17 @@
             <objects>
                 <viewController id="gu3-1q-wGS" customClass="RegisterViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ust-V4-EaO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-rk-eD9">
-                                <rect key="frame" x="87" y="118" width="240" height="150"/>
+                                <rect key="frame" x="87" y="74" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="MDa-oF-O0d"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cHt-Vz-6iR">
-                                <rect key="frame" x="15" y="288" width="384" height="170"/>
+                                <rect key="frame" x="15" y="244" width="384" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoB-oU-rMk">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
@@ -155,12 +155,12 @@
                                             <constraint firstAttribute="height" constant="50" id="klt-v4-tHb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-bc-esO">
-                                <rect key="frame" x="167" y="527" width="80" height="50"/>
+                                <rect key="frame" x="167" y="483" width="80" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="vC4-hM-qZM"/>
@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAu-Xx-Wuk">
-                                <rect key="frame" x="184.5" y="598" width="45" height="30"/>
+                                <rect key="frame" x="184.5" y="554" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="n9L-bb-MOA"/>
                                 </constraints>
@@ -184,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU8-fG-8Hk">
-                                <rect key="frame" x="149.5" y="647" width="115" height="30"/>
+                                <rect key="frame" x="149.5" y="603" width="115" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="ded-wb-MtQ"/>
                                 </constraints>
@@ -229,17 +229,17 @@
             <objects>
                 <viewController id="PCa-P0-CcW" customClass="ForgetpasswordViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UAf-9U-tXx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servsafe-icon-foodmanager-circle" translatesAutoresizingMaskIntoConstraints="NO" id="kKw-ig-9sZ">
-                                <rect key="frame" x="87" y="124" width="240" height="150"/>
+                                <rect key="frame" x="87" y="80" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="kV1-41-b4N"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGv-c0-FZO">
-                                <rect key="frame" x="15" y="294" width="384" height="50"/>
+                                <rect key="frame" x="15" y="250" width="384" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sG1-Ma-CHw"/>
                                 </constraints>
@@ -247,7 +247,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-se-5BO">
-                                <rect key="frame" x="177" y="392" width="60" height="40"/>
+                                <rect key="frame" x="177" y="348" width="60" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="e28-xi-U44"/>
@@ -345,7 +345,7 @@
                             <constraint firstItem="ZLH-nc-A5k" firstAttribute="trailing" secondItem="kaB-Ah-wrS" secondAttribute="trailing" id="xSc-Cb-t1q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="STORE" id="4Mb-bX-37q"/>
+                    <tabBarItem key="tabBarItem" title="STORE" selectedImage="bag.fill" catalog="system" id="4Mb-bX-37q"/>
                     <connections>
                         <outlet property="firstview" destination="tXs-AP-VIE" id="8G2-Fh-HPk"/>
                         <outlet property="secondview" destination="v0s-df-7KA" id="khn-FN-elF"/>
@@ -426,18 +426,19 @@
                             <constraint firstItem="xub-q3-dlf" firstAttribute="top" secondItem="MHq-Wc-tHG" secondAttribute="top" id="dTd-Op-DsC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ORDER" id="HGw-AR-Pnn"/>
+                    <tabBarItem key="tabBarItem" title="ORDER" selectedImage="pencil.slash" catalog="system" id="HGw-AR-Pnn"/>
                     <connections>
                         <outlet property="tableview" destination="xub-q3-dlf" id="9rV-8D-DFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi3-Y0-QAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2102.898550724638" y="-587.27678571428567"/>
+            <point key="canvasLocation" x="2255" y="-633"/>
         </scene>
         <!--Orderdtl View Controller-->
         <scene sceneID="4uM-OO-XWF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5d-mQ-IxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="orderdtlViewController" id="UFV-Qf-7sy" customClass="orderdtlViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="phb-Gj-syg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -503,16 +504,15 @@
                             <constraint firstItem="r2Y-EP-UKW" firstAttribute="leading" secondItem="5CI-Di-hY1" secondAttribute="leading" id="y3P-xa-kvP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VZI-Qe-EAg"/>
                     <connections>
-                        <outlet property="callbtn" destination="dsW-Pj-2m6" id="Yq4-rI-lne"/>
                         <outlet property="customername" destination="mSe-PC-NgZ" id="vfS-Fw-1nC"/>
                         <outlet property="orderdtlsview" destination="r2Y-EP-UKW" id="uJn-Cw-90z"/>
                         <outlet property="statusbtn" destination="vn0-NP-3PC" id="X9d-WY-v56"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5d-mQ-IxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060.8695652173915" y="-644.19642857142856"/>
+            <point key="canvasLocation" x="3381" y="-633"/>
         </scene>
         <!--ACCOUNT-->
         <scene sceneID="e5m-9j-wM8">
@@ -558,7 +558,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihM-CA-dZ1">
-                                <rect key="frame" x="0.0" y="214" width="414" height="30"/>
+                                <rect key="frame" x="70" y="214" width="274" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -567,33 +567,34 @@
                                     <action selector="clicksearch:" destination="ZUw-x0-bfv" eventType="touchUpInside" id="IxJ-3Z-Mkl"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlq-l0-nZT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-vv-MP9">
                                 <rect key="frame" x="0.0" y="249" width="414" height="564"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hU0-Vy-hgF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eaU-2a-718" firstAttribute="top" secondItem="hU0-Vy-hgF" secondAttribute="top" constant="36" id="6D3-MB-oDf"/>
+                            <constraint firstItem="iFe-vv-MP9" firstAttribute="top" secondItem="ihM-CA-dZ1" secondAttribute="bottom" constant="5" id="AKf-v9-XdZ"/>
                             <constraint firstItem="Zgg-TS-h9g" firstAttribute="top" secondItem="eaU-2a-718" secondAttribute="bottom" constant="25" id="AoK-ky-hpC"/>
-                            <constraint firstItem="ihM-CA-dZ1" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" id="EJV-yn-ax2"/>
+                            <constraint firstItem="ihM-CA-dZ1" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" constant="70" id="EJV-yn-ax2"/>
                             <constraint firstItem="eaU-2a-718" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" constant="20" id="H3s-gQ-k76"/>
-                            <constraint firstItem="nlq-l0-nZT" firstAttribute="top" secondItem="ihM-CA-dZ1" secondAttribute="bottom" constant="5" id="I8h-ng-qe5"/>
-                            <constraint firstItem="nlq-l0-nZT" firstAttribute="bottom" secondItem="hU0-Vy-hgF" secondAttribute="bottom" id="Ift-6G-3g7"/>
-                            <constraint firstItem="nlq-l0-nZT" firstAttribute="trailing" secondItem="hU0-Vy-hgF" secondAttribute="trailing" id="OCl-9x-2pF"/>
+                            <constraint firstItem="iFe-vv-MP9" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" id="XQZ-SG-VJj"/>
                             <constraint firstItem="hU0-Vy-hgF" firstAttribute="trailing" secondItem="Zgg-TS-h9g" secondAttribute="trailing" id="XvG-Lb-pzB"/>
+                            <constraint firstItem="hU0-Vy-hgF" firstAttribute="bottom" secondItem="iFe-vv-MP9" secondAttribute="bottom" id="bin-3L-q6x"/>
                             <constraint firstItem="ihM-CA-dZ1" firstAttribute="top" secondItem="iu5-nk-NsC" secondAttribute="bottom" constant="5" id="edK-hF-Stp"/>
                             <constraint firstItem="iu5-nk-NsC" firstAttribute="trailing" secondItem="hU0-Vy-hgF" secondAttribute="trailing" id="gZA-Ji-dJr"/>
-                            <constraint firstItem="hU0-Vy-hgF" firstAttribute="trailing" secondItem="ihM-CA-dZ1" secondAttribute="trailing" id="jJ2-Sz-yGc"/>
+                            <constraint firstItem="hU0-Vy-hgF" firstAttribute="trailing" secondItem="ihM-CA-dZ1" secondAttribute="trailing" constant="70" id="jJ2-Sz-yGc"/>
+                            <constraint firstItem="hU0-Vy-hgF" firstAttribute="trailing" secondItem="iFe-vv-MP9" secondAttribute="trailing" id="ocG-lY-sny"/>
                             <constraint firstItem="iu5-nk-NsC" firstAttribute="top" secondItem="Zgg-TS-h9g" secondAttribute="bottom" id="rRG-C8-zs6"/>
                             <constraint firstItem="Zgg-TS-h9g" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" id="tyA-xO-Igv"/>
-                            <constraint firstItem="nlq-l0-nZT" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" id="vEc-c2-rYE"/>
                             <constraint firstItem="iu5-nk-NsC" firstAttribute="leading" secondItem="hU0-Vy-hgF" secondAttribute="leading" id="vRf-4I-FuF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ACCOUNT" id="BIu-Ox-hJ7"/>
+                    <tabBarItem key="tabBarItem" title="ACCOUNT" selectedImage="creditcard.fill" catalog="system" id="BIu-Ox-hJ7"/>
                     <connections>
-                        <outlet property="detailview" destination="nlq-l0-nZT" id="Q3v-1D-VBp"/>
+                        <outlet property="detailview" destination="iFe-vv-MP9" id="D0V-79-YLF"/>
                         <outlet property="fromdate" destination="84q-T9-boT" id="sSK-5n-mtA"/>
                         <outlet property="printhistory" destination="eaU-2a-718" id="Yfd-OU-pC3"/>
                         <outlet property="todate" destination="heO-0d-8wc" id="SW0-aC-3Ui"/>
@@ -626,8 +627,9 @@
         <!--Navigation Controller-->
         <scene sceneID="zQj-Qs-wcd">
             <objects>
-                <navigationController navigationBarHidden="YES" id="ral-ci-vvC" sceneMemberID="viewController">
+                <navigationController id="ral-ci-vvC" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bul-L4-mu3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -952,11 +954,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="l8n-gK-XTu"/>
-        <segue reference="Lzx-h7-ixI"/>
+        <segue reference="mM2-UA-uzv"/>
+        <segue reference="QiW-K7-GK9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4fc20722-5368-e911-80d5-b82a72db46f21-680x680pr-1" width="309" height="250"/>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
+        <image name="pencil.slash" catalog="system" width="128" height="113"/>
         <image name="servsafe-icon-foodmanager-circle" width="126.5" height="126.5"/>
         <image name="teletype" catalog="system" width="128" height="98"/>
         <systemColor name="labelColor">
