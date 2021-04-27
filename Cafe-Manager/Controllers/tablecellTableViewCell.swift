@@ -22,6 +22,7 @@ class tablecellTableViewCell: UITableViewCell {
     @IBOutlet weak var swich: UISwitch!
     @IBOutlet weak var discount: UILabel!
     @IBOutlet weak var price: UILabel!
+    var locations: String = ""
     
     func setfood(food:foodonce) {
         Name.text = food.Name
