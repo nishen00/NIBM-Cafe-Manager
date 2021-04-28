@@ -22,6 +22,8 @@ class ordercellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var orderid: UILabel!
     
+    
+    
     var tapblock : (() -> Void)? = nil
     var rejecttap : (() -> Void)? = nil
     
