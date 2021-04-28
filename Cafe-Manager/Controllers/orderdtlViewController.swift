@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GeoFire
 
 class orderdtlViewController: UIViewController {
     
@@ -18,16 +19,24 @@ class orderdtlViewController: UIViewController {
     @IBOutlet weak var orderdtlsview: UIView!
     
 
-    
+    var isarrive : Int = 0
     var name : String = ""
     var btnstatus : Int = 0
     var docid : String = ""
     var orderid : String = ""
     var Phone : String = ""
+    var Userid : String = ""
     let db = Firestore.firestore()
+    var geoFireRef: DatabaseReference?
+        var geoFire: GeoFire?
+        var myQuery: GFQuery?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        geoFireRef = Database.database().reference().child("Geolocs")
+                
+        geoFire = GeoFire(firebaseRef: geoFireRef!)
         
         customername.text = name + "(" + orderid + ")"
         var status : String = ""
@@ -44,6 +53,29 @@ class orderdtlViewController: UIViewController {
         if (btnstatus == 4)
         {
             status = "Ready"
+            
+            if isarrive == 1
+            {
+                let location:CLLocation = CLLocation(latitude: 37.785834, longitude: -122.406417)
+               
+                
+                myQuery = geoFire?.query(at: location, withRadius: 100)
+                
+                myQuery?.observe(.keyEntered, with: {(key,location) in
+                
+                
+                    if key == self.Userid
+                    {
+                        self.statusbtn.setTitle("Arrving", for: .normal)
+                        self.statusbtn.backgroundColor = .yellow
+                        self.statusbtn.setTitleColor(.black, for: .normal)
+                        
+                    }
+                
+                
+                
+                })
+            }
         }
         
         if (btnstatus == 1)

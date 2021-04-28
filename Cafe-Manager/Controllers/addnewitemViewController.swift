@@ -201,58 +201,72 @@ class addnewitemViewController: UIViewController, UIImagePickerControllerDelegat
             else
             {
                 
-                var active : Bool = false
-                
-                if swich.isOn
+                if ((price.text?.isnumber) == true && (discount.text?.isnumber) == true)
                 {
-                    active = true
-                }
-                else
-                {
-                    active = false
-                }
-                
-                let db = Firestore.firestore()
-                let ref2 =  db.collection("Food").document()
-                let discountver = Float(discount.text!)
-                let sellprice = Float(price.text!)
-                
-                
-                ref2.setData(["Name":name.text!,"active":active,"category":categorybtn.titleLabel?.text!,"description":fooddescrip.text,"dicid":ref2.documentID,"discount":discountver ,"price":sellprice,"id":ref2.documentID]) { (err) in
-                    if err != nil{
-                        
+                    var active : Bool = false
+                    
+                    if swich.isOn
+                    {
+                        active = true
                     }
                     else
                     {
-                        
-                        let storage = Storage.storage().reference()
-                        
-                        let path:String = "foodimages/" + ref2.documentID + ".png"
-                        
-                        storage.child(path).putData((self.image.image?.pngData())!, metadata: nil) { (_, Error) in
-                            if Error != nil
-                            {
-                                print("erro")
-                            }
-                            else
-                            {
-                                
-                                
-                            }
+                        active = false
+                    }
+                    
+                    let db = Firestore.firestore()
+                    let ref2 =  db.collection("Food").document()
+                    let discountver = Float(discount.text!)
+                    let sellprice = Float(price.text!)
+                    
+                    
+                    ref2.setData(["Name":name.text!,"active":active,"category":categorybtn.titleLabel?.text!,"description":fooddescrip.text,"dicid":ref2.documentID,"discount":discountver ,"price":sellprice,"id":ref2.documentID]) { (err) in
+                        if err != nil{
+                            
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-                        let alert = UIAlertController(title: "Succesfully", message: "Data has been saved succesfully", preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-                             })
-                             alert.addAction(ok)
-                        self.present(alert, animated: true)
+                        else
+                        {
+                            
+                            let storage = Storage.storage().reference()
+                            
+                            let path:String = "foodimages/" + ref2.documentID + ".png"
+                            
+                            storage.child(path).putData((self.image.image?.pngData())!, metadata: nil) { (_, Error) in
+                                if Error != nil
+                                {
+                                    print("erro")
+                                }
+                                else
+                                {
+                                    
+                                    
+                                }
+                            }
+                            
+                            
+                            
+                            
+                            
+                            
+                            let alert = UIAlertController(title: "Succesfully", message: "Data has been saved succesfully", preferredStyle: .alert)
+                            let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                                 })
+                                 alert.addAction(ok)
+                            self.present(alert, animated: true)
+                        }
                     }
                 }
+                else
+                {
+                    let alert = UIAlertController(title: "Error", message: "Price field and discount field should be numeric", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                         })
+                         alert.addAction(ok)
+                    self.present(alert, animated: true)
+                }
+                
+                
+                
                 
                 
             }

@@ -19,4 +19,7 @@ target 'Cafe-Manager' do
 
     pod 'Firebase/Storage'
 
+    pod 'GeoFire', '~> 4.0'
+
+
 end

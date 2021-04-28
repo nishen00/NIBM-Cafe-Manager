@@ -17,9 +17,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
+        
+        
+        
         super.viewDidLoad()
+        
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let userID = Auth.auth().currentUser?.uid
+        
+        if userID != ""
+        {
+            UserDefaults.standard.set(userID, forKey: "userId")
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeSet") as! UITabBarController
+
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+        }
+        else
+        {
+            
+        }
     }
     
     func validation() -> String? {

@@ -144,11 +144,17 @@ class orderViewController: UIViewController {
     
     func rejectorder(docid:String){
         
-        db.collection("order").document(docid).delete() { err in
-            if let err = err {
-                print("Error removing document: \(err)")
-            } else {
-                print("Document successfully removed!")
+        let updateshowstatus = db.collection("order").document(docid)
+        
+        
+        updateshowstatus.updateData(["section":"0","status":5]) { (error) in
+            if error != nil
+            {
+               print(error)
+            }
+            else
+            {
+                print("updated")
             }
         }
         
@@ -179,6 +185,8 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         viewController.docid = globle2[indexPath.row].docid
         viewController.orderid = globle2[indexPath.row].orderno
         viewController.Phone = globle2[indexPath.row].cusphone
+        viewController.isarrive = 1
+        viewController.Userid = globle2[indexPath.row].userid
         
         self.navigationController?.pushViewController(viewController, animated: true)
         }
@@ -191,6 +199,8 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
             viewController.docid = globle[indexPath.row].docid
             viewController.orderid = globle[indexPath.row].orderno
             viewController.Phone = globle[indexPath.row].cusphone
+            viewController.isarrive = 0
+            viewController.Userid = globle2[indexPath.row].userid
             
             self.navigationController?.pushViewController(viewController, animated: true)
         }
@@ -232,6 +242,49 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         let orr = filterarry[indexPath.row]
         
         cell.setorder(order: orr)
+        
+        cell.tapblock = {
+            self.approveorder(docid: self.globle[indexPath.row].docid)
+            self.tableview.reloadData()
+
+        }
+        
+        cell.rejecttap = {
+            
+            self.rejectorder(docid: self.globle[indexPath.row].docid)
+            self.tableview.reloadData()
+            
+        }
+        
+        cell.statuschange = {
+            
+            
+            print(self.globle2.count)
+            
+            if self.globle2[indexPath.row].status == 2 {
+                
+                self.Preapareorder(docid: self.globle2[indexPath.row].docid)
+                self.tableview.reloadData()
+                
+            }
+            
+            else{
+                
+                if self.globle2[indexPath.row].status == 3 {
+                    
+                    self.Readyorder(docid: self.globle2[indexPath.row].docid)
+                    self.tableview.reloadData()
+                    
+                }
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
         return cell
     }
     
