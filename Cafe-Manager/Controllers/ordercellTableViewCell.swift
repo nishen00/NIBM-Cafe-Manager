@@ -58,6 +58,7 @@ class ordercellTableViewCell: UITableViewCell {
             statusbtn.isHidden = false
             acceptbtn.isHidden = true
             rejectbtn.isHidden = true
+            self.statusbtn.backgroundColor = .blue
         }
         
         if(order.status == 3)
@@ -66,6 +67,7 @@ class ordercellTableViewCell: UITableViewCell {
             statusbtn.isHidden = false
             acceptbtn.isHidden = true
             rejectbtn.isHidden = true
+            self.statusbtn.backgroundColor = .blue
         }
         
         if (order.status == 4)
@@ -75,10 +77,12 @@ class ordercellTableViewCell: UITableViewCell {
             acceptbtn.isHidden = true
             rejectbtn.isHidden = true
             
+            self.statusbtn.backgroundColor = .blue
+            
             
             
             let location:CLLocation = CLLocation(latitude: 37.785834, longitude: -122.406417)
-           
+//           geoFire!.setLocation(CLLocation(latitude: 37.785834, longitude: -122.406417), forKey: order.userid)
             
             myQuery = geoFire?.query(at: location, withRadius: 100)
             
@@ -119,6 +123,16 @@ class ordercellTableViewCell: UITableViewCell {
             acceptbtn.isHidden = true
             rejectbtn.isHidden = true
             self.statusbtn.backgroundColor = .red
+        }
+        
+        
+        if (order.status == 6)
+        {
+            status = "Done"
+            statusbtn.isHidden = false
+            acceptbtn.isHidden = true
+            rejectbtn.isHidden = true
+            self.statusbtn.backgroundColor = .green
         }
         
         statusbtn.setTitle(status, for: .normal)

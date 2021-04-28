@@ -162,6 +162,27 @@ class orderViewController: UIViewController {
         
     }
     
+    
+    func orderdone(docid:String){
+        
+        let updateshowstatus = db.collection("order").document(docid)
+        
+        
+        updateshowstatus.updateData(["section":"0","status":6]) { (error) in
+            if error != nil
+            {
+               print(error)
+            }
+            else
+            {
+                print("updated")
+            }
+        }
+        
+        getorder()
+        
+    }
+    
 
    
 }
@@ -277,6 +298,19 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
                     
                 }
                 
+                else
+                {
+                    if self.globle2[indexPath.row].status == 4 {
+                        
+                        self.orderdone(docid: self.globle2[indexPath.row].docid)
+                        self.tableview.reloadData()
+                        
+                    }
+                }
+                
+                
+                
+                
             }
             
             
@@ -288,74 +322,7 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        
-        
-        
-        let Reject = UIContextualAction(style: .normal, title: "Reject") { (action, view, completionHandler) in
-            
-            self.rejectorder(docid: self.globle[indexPath.row].docid)
-            self.tableview.reloadData()
-            
-        }
-        Reject.backgroundColor = .red
-        
-        let Accept = UIContextualAction(style: .normal, title: "Accept") { (action, view, completionHandler) in
-            
-            self.approveorder(docid: self.globle[indexPath.row].docid)
-            self.tableview.reloadData()
-            
-        }
-        Accept.backgroundColor = .green
-        
-        
-        let Prepare = UIContextualAction(style: .normal, title: "Prepare") { (action, view, completionHandler) in
-            
-            self.Preapareorder(docid: self.globle2[indexPath.row].docid)
-            self.tableview.reloadData()
-            
-        }
-        
-        let Ready = UIContextualAction(style: .normal, title: "Ready") { (action, view, completionHandler) in
-            
-            self.Readyorder(docid: self.globle2[indexPath.row].docid)
-            self.tableview.reloadData()
-            
-        }
-        
-        Prepare.backgroundColor = .green
-   
-        
-        
-        if indexPath.section == 1
-        {
-        
-        let swipe = UISwipeActionsConfiguration(actions: [Reject,Accept])
-            return swipe
-        }
-        
-        else
-        {
-            if(globle2[indexPath.row].status == 4)
-            {
-                let swipe = UISwipeActionsConfiguration(actions: [])
-                    return swipe
-            }
-            
-            if(globle2[indexPath.row].status == 3)
-            {
-                let swipe = UISwipeActionsConfiguration(actions: [Ready])
-                    return swipe
-            }
-            else
-            {
-        let swipe = UISwipeActionsConfiguration(actions: [Prepare])
-            return swipe
-            }
-        }
-       
-    }
+    
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0

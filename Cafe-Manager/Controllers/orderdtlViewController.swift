@@ -83,6 +83,20 @@ class orderdtlViewController: UIViewController {
             status = "Waiting"
         }
         
+        if btnstatus == 5
+        {
+            status = "Rejected"
+            self.statusbtn.backgroundColor = .red
+           
+        }
+        
+        if btnstatus == 6
+        {
+            status = "Done"
+            self.statusbtn.backgroundColor = .green
+            self.statusbtn.setTitleColor(.black, for: .normal)
+        }
+        
         statusbtn.setTitle(status, for: .normal)
         statusbtn.layer.cornerRadius = 0.1 * statusbtn.bounds.size.width
         
