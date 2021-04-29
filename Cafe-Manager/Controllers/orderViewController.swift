@@ -221,7 +221,7 @@ extension orderViewController: UITableViewDelegate, UITableViewDataSource{
             viewController.orderid = globle[indexPath.row].orderno
             viewController.Phone = globle[indexPath.row].cusphone
             viewController.isarrive = 0
-            viewController.Userid = globle2[indexPath.row].userid
+            viewController.Userid = globle[indexPath.row].userid
             
             self.navigationController?.pushViewController(viewController, animated: true)
         }
