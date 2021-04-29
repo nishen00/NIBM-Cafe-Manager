@@ -13,6 +13,8 @@
 		9D48E3E8262D879C00A47E3C /* ordercellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48E3E7262D879C00A47E3C /* ordercellTableViewCell.swift */; };
 		9D48E3ED262D89CC00A47E3C /* orderdtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48E3EC262D89CC00A47E3C /* orderdtl.swift */; };
 		9D4D5EF4263A5B3F008832A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D4D5EF3263A5B3F008832A6 /* GoogleService-Info.plist */; };
+		9D4D5F17263A6CBD008832A6 /* validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D5F16263A6CBD008832A6 /* validations.swift */; };
+		9D4D5F22263AB376008832A6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D5F21263AB376008832A6 /* login.swift */; };
 		9D5BB6BB262FE482001F236C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6BA262FE482001F236C /* AccountViewController.swift */; };
 		9D5BB6C026302806001F236C /* orderReportdtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6BF26302806001F236C /* orderReportdtl.swift */; };
 		9D5BB6C526304038001F236C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BB6C426304038001F236C /* RegisterViewController.swift */; };
@@ -63,6 +65,8 @@
 		9D48E3E7262D879C00A47E3C /* ordercellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordercellTableViewCell.swift; sourceTree = "<group>"; };
 		9D48E3EC262D89CC00A47E3C /* orderdtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderdtl.swift; sourceTree = "<group>"; };
 		9D4D5EF3263A5B3F008832A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D4D5F16263A6CBD008832A6 /* validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validations.swift; sourceTree = "<group>"; };
+		9D4D5F21263AB376008832A6 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		9D5BB6BA262FE482001F236C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9D5BB6BF26302806001F236C /* orderReportdtl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderReportdtl.swift; sourceTree = "<group>"; };
 		9D5BB6C426304038001F236C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				9DF4C967262A768400C2C833 /* Cafe_ManagerTests.swift */,
 				9DF4C969262A768400C2C833 /* Info.plist */,
+				9D4D5F21263AB376008832A6 /* login.swift */,
 			);
 			path = "Cafe-ManagerTests";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				9DF4C9D0262AE01500C2C833 /* category.swift */,
 				9D48E3EC262D89CC00A47E3C /* orderdtl.swift */,
 				9D5BB6BF26302806001F236C /* orderReportdtl.swift */,
+				9D4D5F16263A6CBD008832A6 /* validations.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				9D433E22262C67DE0090B58E /* categoryViewController.swift in Sources */,
 				9D5BB6C526304038001F236C /* RegisterViewController.swift in Sources */,
 				9D48E3ED262D89CC00A47E3C /* orderdtl.swift in Sources */,
+				9D4D5F17263A6CBD008832A6 /* validations.swift in Sources */,
 				9D6A8943262C00D800C160E4 /* addnewitemViewController.swift in Sources */,
 				9D61CFB8262EB2AD00DC89F4 /* orderdtlViewController.swift in Sources */,
 				9DF4C951262A768300C2C833 /* AppDelegate.swift in Sources */,
@@ -429,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF4C968262A768400C2C833 /* Cafe_ManagerTests.swift in Sources */,
+				9D4D5F22263AB376008832A6 /* login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +649,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/Firebase/CoreOnly/Sources";
 				INFOPLIST_FILE = "Cafe-ManagerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -662,6 +671,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/Firebase/CoreOnly/Sources";
 				INFOPLIST_FILE = "Cafe-ManagerTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (

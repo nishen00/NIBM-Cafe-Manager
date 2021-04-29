@@ -73,22 +73,13 @@ class categoryViewController: UIViewController {
         
     }
     
-    func validation() -> String? {
-        if categoryname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        {
-            return ""
-        }
-        else
-        {
-            return "Requeire fields empty"
-        }
-        
-    }
     
     
     @IBAction func addcategory(_ sender: Any) {
         
-        if validation() != ""
+        let validationclass = Cafe_Manager.validations()
+        
+        if validationclass.categoryName(name: categoryname.text!)!
         {
         
         

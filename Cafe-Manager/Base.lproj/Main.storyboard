@@ -24,10 +24,11 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-UQ-oQJ">
-                                <rect key="frame" x="47" y="270" width="320" height="108"/>
+                                <rect key="frame" x="47" y="269" width="320" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLy-1W-8u2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="EmailAddress"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="tvt-di-Usu"/>
                                         </constraints>
@@ -54,8 +55,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWF-XW-sdk">
-                                <rect key="frame" x="162" y="456" width="90" height="45"/>
+                                <rect key="frame" x="162" y="455" width="90" height="45"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginsetsection"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="3ty-ZX-c2d"/>
                                     <constraint firstAttribute="height" constant="45" id="WOd-jk-dCI"/>
@@ -70,7 +72,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4C-mB-I5F">
-                                <rect key="frame" x="171" y="516" width="72" height="33"/>
+                                <rect key="frame" x="171" y="515" width="72" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Register?">
                                     <color key="titleColor" systemColor="linkColor"/>
@@ -80,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-oi-zVl">
-                                <rect key="frame" x="149.5" y="559" width="115" height="30"/>
+                                <rect key="frame" x="149.5" y="558" width="115" height="30"/>
                                 <state key="normal" title="Forget Password">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -88,16 +90,28 @@
                                     <segue destination="PCa-P0-CcW" kind="show" id="l8n-gK-XTu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-W8-kBd">
+                                <rect key="frame" x="0.0" y="224" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Ur-4U-0op"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lRi-UQ-oQJ" firstAttribute="top" secondItem="0WW-xp-m06" secondAttribute="bottom" constant="51" id="1IY-6b-UMG"/>
+                            <constraint firstItem="lRi-UQ-oQJ" firstAttribute="top" secondItem="Ehv-W8-kBd" secondAttribute="bottom" constant="5" id="5ZQ-iO-sfe"/>
                             <constraint firstItem="QWF-XW-sdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CPA-kf-SlL"/>
                             <constraint firstItem="U4C-mB-I5F" firstAttribute="top" secondItem="QWF-XW-sdk" secondAttribute="bottom" constant="15" id="DfG-KJ-Qg8"/>
                             <constraint firstItem="z9z-oi-zVl" firstAttribute="top" secondItem="U4C-mB-I5F" secondAttribute="bottom" constant="10" id="Dr1-cB-iHd"/>
                             <constraint firstItem="0WW-xp-m06" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EJp-qh-f5Z"/>
                             <constraint firstItem="z9z-oi-zVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rcc-V1-RTr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehv-W8-kBd" secondAttribute="trailing" id="akB-8f-qpU"/>
+                            <constraint firstItem="Ehv-W8-kBd" firstAttribute="top" secondItem="0WW-xp-m06" secondAttribute="bottom" constant="5" id="ff3-dU-czF"/>
+                            <constraint firstItem="Ehv-W8-kBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hJD-vE-xGz"/>
                             <constraint firstItem="lRi-UQ-oQJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="iC0-jl-buw"/>
                             <constraint firstItem="0WW-xp-m06" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="nEM-k1-EJS"/>
                             <constraint firstItem="QWF-XW-sdk" firstAttribute="top" secondItem="lRi-UQ-oQJ" secondAttribute="bottom" constant="78" id="pIu-Gt-1FX"/>
@@ -143,6 +157,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Pp-xz9">
                                         <rect key="frame" x="0.0" y="60" width="384" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="phonenumberfind"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="epC-aQ-nnU"/>
                                         </constraints>
@@ -365,7 +380,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xub-q3-dlf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="116" id="fkC-MM-9Rp" customClass="ordercellTableViewCell" customModule="Cafe_Manager" customModuleProvider="target">
@@ -452,14 +467,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwF-2J-dBM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="orderfindsection"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gzh-RE-gHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MHq-Wc-tHG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xub-q3-dlf" firstAttribute="leading" secondItem="MHq-Wc-tHG" secondAttribute="leading" id="7qv-EW-1VA"/>
+                            <constraint firstItem="xub-q3-dlf" firstAttribute="top" secondItem="MwF-2J-dBM" secondAttribute="bottom" id="DVG-wx-XH3"/>
                             <constraint firstItem="MHq-Wc-tHG" firstAttribute="trailing" secondItem="xub-q3-dlf" secondAttribute="trailing" id="HkO-50-mpF"/>
                             <constraint firstItem="MHq-Wc-tHG" firstAttribute="bottom" secondItem="xub-q3-dlf" secondAttribute="bottom" id="Xen-Tr-LKj"/>
-                            <constraint firstItem="xub-q3-dlf" firstAttribute="top" secondItem="MHq-Wc-tHG" secondAttribute="top" id="dTd-Op-DsC"/>
+                            <constraint firstItem="MHq-Wc-tHG" firstAttribute="trailing" secondItem="MwF-2J-dBM" secondAttribute="trailing" id="fIh-9E-VYb"/>
+                            <constraint firstItem="MwF-2J-dBM" firstAttribute="top" secondItem="MHq-Wc-tHG" secondAttribute="top" id="jSk-IE-WE7"/>
+                            <constraint firstItem="MwF-2J-dBM" firstAttribute="leading" secondItem="MHq-Wc-tHG" secondAttribute="leading" id="yJ3-Qa-ust"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ORDER" selectedImage="pencil.slash" catalog="system" id="HGw-AR-Pnn"/>
@@ -993,7 +1022,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mM2-UA-uzv"/>
+        <segue reference="Xbr-3w-ba6"/>
+        <segue reference="l8n-gK-XTu"/>
         <segue reference="QiW-K7-GK9"/>
     </inferredMetricsTieBreakers>
     <resources>

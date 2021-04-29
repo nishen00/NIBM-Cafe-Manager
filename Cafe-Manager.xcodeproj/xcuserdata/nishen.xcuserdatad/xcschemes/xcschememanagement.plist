@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>23</integer>
 		</dict>
+		<key>Cafe-ManagerUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9DF4C94C262A768300C2C833</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DF4C962262A768400C2C833</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DF4C96D262A768400C2C833</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

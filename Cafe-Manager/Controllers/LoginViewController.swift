@@ -30,40 +30,34 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        let userID = Auth.auth().currentUser?.uid
-        
-        if userID != ""
-        {
-            UserDefaults.standard.set(userID, forKey: "userId")
-            
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeSet") as! UITabBarController
-
-                self.navigationController?.pushViewController(nextViewController, animated: true)
-        }
-        else
-        {
-            
-        }
+//        let userID = Auth.auth().currentUser?.uid
+//
+//        if userID != ""
+//        {
+//            UserDefaults.standard.set(userID, forKey: "userId")
+//
+//            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//
+//                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeSet") as! UITabBarController
+//
+//                self.navigationController?.pushViewController(nextViewController, animated: true)
+//        }
+//        else
+//        {
+//
+//        }
     }
     
-    func validation() -> String? {
-        if email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        {
-            return ""
-        }
-        else
-        {
-            return "Requeire fields empty"
-        }
-        
-    }
+    
     
     
     @IBAction func login(_ sender: Any) {
         
-        if validation() != ""
+        let validationclass = Cafe_Manager.validations()
+        
+        
+        
+        if validationclass.validationEmailPassword(email: email.text!, password: password.text!)!
         {
             
             let emailget = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -77,6 +71,8 @@ class LoginViewController: UIViewController {
                     let alert = UIAlertController(title: "Invalid Authentication", message: "Invalid UserName Password", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
                          })
+                    alert.view.accessibilityIdentifier = "loginalertview"
+                    ok.accessibilityIdentifier = "okloginfalse"
                          alert.addAction(ok)
                     self.present(alert, animated: true)
                 }

@@ -6,28 +6,68 @@
 //
 
 import XCTest
+
 @testable import Cafe_Manager
 
 class Cafe_ManagerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testvalidetionEmailPasswordempty()  {
+        
+        let validetion = validations()
+        let result = validetion.validationEmailPassword(email: "gg@gmail.com", password: "DDcafeManager123")
+        
+        XCTAssertEqual(result, true)
+        
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testvalidateemailpasswordphoneEmpty () {
+        
+        let validetion = validations()
+        let result = validetion.validationEmailPasswordphone(email: "nishen@gmail.com", password: "nishenDf11", phone: "0757648283")
+        
+        XCTAssertEqual(result, true)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
+    
+    func testcategory () {
+        
+        let validetion = validations()
+        let result = validetion.categoryName(name: "Rice")
+        
+        XCTAssertEqual(result, true)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testRegXEmail () {
+        
+        let validetion = validations()
+        let result = validetion.RegXEmail(email: "nishen@gmail.com")
+        
+        XCTAssertEqual(result, true)
+        
     }
-
+    
+    
+    func testRegXpassword() {
+        
+        let validetion = validations()
+        let result = validetion.RegXpassword(password: "ddqwrsggsj123")
+        
+        XCTAssertEqual(result, true)
+    }
+    
+    func testRegXphone() {
+        
+        let validetion = validations()
+        let result = validetion.RegXphone(phone: "0757648283")
+        
+        XCTAssertEqual(result, true)
+        
+    }
+    
+    
+    
+    
+    
 }
