@@ -73,6 +73,7 @@ class AccountViewController: UIViewController {
         dateformat.dateFormat = "yyyy-MM-dd"
         
         fromdate.text = dateformat.string(from: datepicker.date)
+        getdetails()
         view.endEditing(true)
     }
     
